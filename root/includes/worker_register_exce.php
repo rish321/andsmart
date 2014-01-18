@@ -72,17 +72,23 @@ function checkfor_files($file_name, $db_name,$conn_t)
 
 //$photo = $_FILES["photo"]["name"];
 //$id_proof = $_FILES["id_proof"]["name"];
-$mobileno = $_POST["mobileno"];
-$name = $_POST["name"];
-$id_type = $_POST["id_proof_type"];
-$id_no = $_POST["id_proof_no"];
-$loc1 = $_POST['mark'];
-$loc2 = $_POST['series'];
+
+$pvalue = json_decode(stripslashes($_POST["json_obj"]), true);
+
+
+$mobileno = $pvalue["mobileno"];
+$name = $pvalue["name"];
+$id_type = $pvalue["id_proof_type"];
+$id_no = $pvalue["id_proof_no"];
+$loc1 = $pvalue['mark'];
+$loc2 = $pvalue['series'];
 $loc_final = $loc1."_".$loc2;
-$occupation = $_POST["occupation"];
+$occupation = $pvalue["occupation"];
+$language = $pvalue['language'];
 
 
-$language = $_POST['language'];
+
+
 
 $str = $mobileno." ".$name." ".$id_type." ".$id_no." ".$loc1." ".$language." ".$occupation;
 

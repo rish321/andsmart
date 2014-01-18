@@ -1,6 +1,6 @@
 function chk_worker()
 {
-//	alert("here");
+	alert("here");
 //	return false;
 	form = document.forms[0];
 	mobileno = form.mobileno;
@@ -74,9 +74,35 @@ function data(form)
 		}
 	}
 	
-	var params = "name="+name+"&mobileno="+mobileno+"&mark="+loc+"&series="+loc2+"&language="+language+"&id_proof_type="+id_type;
-	params += "&id_proof_no="+id_no+"&occupation="+occupation;
+	//var params = "name="+name+"&mobileno="+mobileno+"&mark="+loc+"&series="+loc2+"&language="+language+"&id_proof_type="+id_type;
+	//params += "&id_proof_no="+id_no+"&occupation="+occupation;
+	
+	var params = "{name:'"+name+"', mobileno:'"+mobileno+"', mark:'"+loc+"', series:'"+loc2+"', language:'"+language+"', id_proof_type:'"+id_type;
+	params += "', id_proof_no:'"+id_no+"', occupation:'"+occupation+"'} ";
 
+	alert(params);
+	
+//	var json = JSON.stringify(eval("(" + params + ")"));
+//	var json = JSON.parse(params);
+
+	var json = JSON.stringify(eval('('+params+')'));
+
+//	alert(json);
+
+	$.post('/andsmart/root/includes/worker_register_exce.php',{ json_obj:json }, 
+		function(data){
+			if(data=="Success")
+			{
+				alert("data successfully enterd.");
+				window.location.replace("/andsmart/index.html?responce=Thanks%20for%20registration.");
+			}
+			else	
+				alert("Data entry fail. Recheck your entry");
+		}
+	  ); 
+
+	
+	/*
 //	alert(params);return false;
 
 	var xmlhttp;
@@ -94,7 +120,7 @@ function data(form)
 //	xmlhttp.open("GET",url,true);
 
 	//Send the proper header information along with the request
-	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.setRequestHeader("Content-type", 'text/html; charset=utf-8');
 	xmlhttp.setRequestHeader("Content-length", params.length);
 	xmlhttp.setRequestHeader("Connection", "close");
 	
@@ -111,15 +137,15 @@ function data(form)
 				alert('fail');
 		}
 	}
+	
+	//http.onreadystatechange = function() {//Call a function when the state changes.
+	//	if(http.readyState == 4 && http.status == 200) {
+	//		alert(http.responseText);
+	//	}
+	//} 
 
- /*	http.onreadystatechange = function() {//Call a function when the state changes.
-		if(http.readyState == 4 && http.status == 200) {
-			alert(http.responseText);
-		}
-	} */
-
-	xmlhttp.send(params);
-
+	xmlhttp.send(params); */
+ 
 //	var xmlhttp;
 //	xmlhttp.open("GET","http://10.2.8.180/PHP/getAllCustomers.php",true);
 //	xmlhttp.send(); 
