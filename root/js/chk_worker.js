@@ -1,6 +1,6 @@
 function chk_worker()
 {
-	alert("here");
+//	alert("here");
 //	return false;
 	form = document.forms[0];
 	mobileno = form.mobileno;
@@ -50,7 +50,7 @@ function chk_worker()
 
 function data(form)
 {
-	var url = "/andsmart/root/includes/worker_register_exce.php";
+	var url = "http://10.2.8.180/andsmart/root/includes/worker_register_exce.php";
 //	var params = "name=Awesome";
 	
 	mobileno = form.mobileno.value;
@@ -80,7 +80,7 @@ function data(form)
 	var params = "{name:'"+name+"', mobileno:'"+mobileno+"', mark:'"+loc+"', series:'"+loc2+"', language:'"+language+"', id_proof_type:'"+id_type;
 	params += "', id_proof_no:'"+id_no+"', occupation:'"+occupation+"'} ";
 
-	alert(params);
+//	alert(params);
 	
 //	var json = JSON.stringify(eval("(" + params + ")"));
 //	var json = JSON.parse(params);
@@ -89,7 +89,7 @@ function data(form)
 
 //	alert(json);
 
-	$.post('/andsmart/root/includes/worker_register_exce.php',{ json_obj:json }, 
+	$.post('http://10.2.8.180/andsmart/root/includes/worker_register_exce.php',{ json_obj:json }, 
 		function(data){
 			if(data=="Success")
 			{
