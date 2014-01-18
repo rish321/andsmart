@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.dd.min.js" type="text/javascript"></script> 
+<link rel="stylesheet" type="text/css" src="css/dd.css" />
+</head>
+<body>
+    <script language="javascript">
+	$(document).ready(function(e) {
+	try {
+	$("body select").msDropDown();
+	} catch(e) {
+	alert(e.message);
+	}
+	});
+    </script>
+	<!--  <select name="webmenu" id="webmenu"  onchange="showValue(this.value)">
+    <option value="calendar">Calendar</option>
+    <option value="shopping_cart">Shopping Cart</option>
+    <option value="cd">CD</option>
+    <option value="email"  selected="selected">Email</option>
+    <option value="faq">FAQ</option>
+    <option value="games">Games</option>
+  </select>--!>
+  <select name="webmenu" id="webmenu">
+    <option value="calendar" data-image="images/occupations/milk.png">Keeda</option>
+    <option value="shopping_cart" data-image="images/occupations/maid.png">Shopping Cart</option>
+    <option value="cd" data-image="images/occupations/news.png">CD</option>
+    <option value="faq" data-image="images/occupations/cook.png">FAQ</option>
+    <option value="games" data-image="images/occupations/driver.png">Games</option>
+  </select>
+</body>
+</html>
