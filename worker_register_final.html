@@ -113,13 +113,13 @@ $("#series").chained("#mark"); /* or $("#series").chainedTo("#mark"); */
 			 <div class="top-box">
 				<form action="#" method="post" onsubmit="return chk_worker();" enctype="multipart/form-data" >
 				<table align='center' style='margin: 0px auto; width:50%' >
-				<tr><td align="left">Name:</td><td align="left"><input type="text" name="name"></td></tr><br>
-				<tr><td align="left">Mobile No.
+				<tr><td align="left">Name*:</td><td align="left"><input type="text" name="name1" value=''></td></tr><br>
+				<tr><td align="left">Mobile No.*
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</td><td align="left"><input type="text" name="mobileno"></td>
-				<tr><td align="left">Languages:</td><td align="left">
+				</td><td align="left"><input type="text" name="mobileno" value=''></td>
+				<tr><td align="left">Languages*:</td><td align="left">
 				<select id='language' multiple='multiple' name='language[]' >
 				<option value="hindi">हिंदी (Hindi)</option>
 				<option value="english">English</option>
@@ -141,7 +141,7 @@ $("#series").chained("#mark"); /* or $("#series").chainedTo("#mark"); */
 					<option value="telagu">Telagu</option>
 				</select> -->
 				</td></tr>
-<tr><td align="left">Location:</td><td align="left">
+<tr><td align="left">Location*:</td><td align="left">
 
 <select id="mark" name="mark">
     <option value="">--</option>
@@ -4111,6 +4111,7 @@ $("#series").chained("#mark"); /* or $("#series").chainedTo("#mark"); */
 				<option value='passport'>Passport</option>
 				<option value='ration'>Ration Card</option>
 				<option value='voter'>Voter ID</option>
+				<option value='studentid'>Student's ID</option>
 			</select>
 			&nbsp;&nbsp;&nbsp;&nbsp;
 			<label for="id">ID Proof No.:</label>
@@ -4127,63 +4128,54 @@ $("#series").chained("#mark"); /* or $("#series").chainedTo("#mark"); */
 <table align='center' style='margin: 0px auto; width:90%; frame:box; border: 1'>
 	<tr>
 		<td> <input id="electrician" type="radio" value="electrician" name="question1">
-    <label for="electrician"><img src="images/occupations/electrician.png"><br /> Electrician</label>
+    <label for="electrician"><img src="images/occupations/electrician.png" width=50%><br /> Electrician</label>
 		</td>
 
 		<td> <input id="barber" type="radio" value="barber" name="question1">
-    <label for="barber"><img src="images/occupations/barber.png"><br /> Barber</label>
-		</td>
-
-		<td> <input id="bhajan" type="radio" value="bhajan" name="question1">
-    <label for="bhajan"><img src="images/occupations/bhajan.png"><br /> Bhajan Mandali</label>
-		</td>
-
-		<td> <input id="mechanic" type="radio" value="mechanic" name="question1">
-   	 <label for="mechanic"><img src="images/occupations/mechanic.png"><br /> Mechanic</label><br />
+    <label for="barber"><img src="images/occupations/barber.png" width="50%"><br /> Barber</label>
 		</td>
 		<td> <input id="tiffin" type="radio" value="tiffin" name="question1">
-   	 <label for="tiffin"><img src="images/occupations/tiffin.png"><br /> Tiffin</label><br />
+   	 <label for="tiffin"><img src="images/occupations/tiffin.png" width="50%"><br /> Tiffin</label><br />
+		</td>
+
+
+		<td> <input id="mechanic" type="radio" value="mechanic" name="question1">
+   	 <label for="mechanic"><img src="images/occupations/mechanic.png" width="50%"><br /> Mechanic</label><br />
 		</td>
 	</tr>
 <br /><br />
 	<tr>
 		<td><input id="plumber" type="radio" value="plumber" name="question1">
-    <label for="plumber"><img src="images/occupations/plumber.png"><br />Plumber</label>
+    <label for="plumber"><img src="images/occupations/plumber.png" width="50%"><br />Plumber</label>
 		</td>
 
 		<td><input id="driver" type="radio" value="driver" name="question1">
-    <label for="driver"><img src="images/occupations/driver.png"><br /> Driver</label>
+    <label for="driver"><img src="images/occupations/driver.png" width="50%"><br /> Driver</label>
 		</td>
 
 		<td><input id="laundry" type="radio" value="laundry" name="question1">
-    <label for="laundry"><img src="images/occupations/laundry.png"><br />Laundry</label>
+    <label for="laundry"><img src="images/occupations/laundry.png" width="50%"><br />Laundry</label>
 		</td>
 		<td><input id="tailor" type="radio" value="tailor" name="question1">
-    <label for="tailor"><img src="images/occupations/tailor.png"><br />Tailor</label>
+    <label for="tailor"><img src="images/occupations/tailor.png" width="50%"><br />Tailor</label>
 		</td>
 
-		<td><input id="gardener" type="radio" value="gardener" name="question1">
-    <label for="gardener"><img src="images/occupations/garderner.png"><br />Gardener</label>
-		</td>
 	</tr>
 <br />
 	<tr>
 		<td><input id="maid" type="radio" value="maid" name="question1">
-    <label for="maid"><img src="images/occupations/maid.png"><br />Maid</label>
+    <label for="maid"><img src="images/occupations/maid.png" width="50%"><br />Maid</label>
 		</td>
 
 		<td><input id="milkman" type="radio" value="milkman" name="question1">
-    <label for="milkman"><img src="images/occupations/milkman.png"><br />Milkman</label>
+    <label for="milkman"><img src="images/occupations/milkman.png" width="50%"><br />Milkman</label>
 		</td>
 
 		<td><input id="cook" type="radio" value="cook" name="question1">
-    <label for="cook"><img src="images/occupations/cook.png"><br />Cook</label>
+    <label for="cook"><img src="images/occupations/cook.png" width="50%"><br />Cook</label>
 		</td>
 		<td><input id="carpenter" type="radio" value="carpenter" name="question1">
-    <label for="carpenter"><img src="images/occupations/carpanter.png"><br />Carpenter</label>
-		</td>
-		<td><input id="dishwasher" type="radio" value="dishwasher" name="question1">
-    <label for="dishwasher"><img src="images/occupations/dishwasher.png"><br />Dishwasher</label>
+    <label for="carpenter"><img src="images/occupations/carpanter.png" width="50%"><br />Carpenter</label>
 		</td>
 	</tr>
 <br />
@@ -4192,42 +4184,51 @@ $("#series").chained("#mark"); /* or $("#series").chainedTo("#mark"); */
 </tr>
 	<tr>
 		<td><input id="sweeper" type="radio" value="sweeper" name="question1">
-    <label for="sweeper"><img src="images/occupations/sweeper.png"><br />Sweeper</label>
+    <label for="sweeper"><img src="images/occupations/sweeper.png" width="50%"><br />Sweeper</label>
 		</td>
 
 		<td><input id="labourer" type="radio" value="labourer" name="question1">
-    <label for="labourer"><img src="images/occupations/labor.png"><br />Labourer</label>
+    <label for="labourer"><img src="images/occupations/labor.png" width="50%"><br />Labourer</label>
 		</td>
 
 		<td><input id="cobbler" type="radio" value="cobbler" name="question1">
-    <label for="cobbler"><img src="images/occupations/cobbler.png"><br />Cobler</label>
+    <label for="cobbler"><img src="images/occupations/cobbler.png" width="50%"><br />Cobler</label>
 		</td>
 		<td><input id="water" type="radio" value="water" name="question1">
-    <label for="water"><img src="images/occupations/waterman.png"><br />Water-Man</label>
-		</td>
-		<td><input id="painter" type="radio" value="painter" name="question1">
-    <label for="painter"><img src="images/occupations/painter.png"><br />Painter</label>
+    <label for="water"><img src="images/occupations/waterman.png" width="50%"><br />Water-Man</label>
 		</td>
 	</tr>
 	<tr>
 		<td><input id="photographer" type="radio" value="photographer" name="question1">
-    <label for="photographer"><img src="images/occupations/photographer.png"><br />Photographer</label>
+    <label for="photographer"><img src="images/occupations/photographer.png" width="50%"><br />Photographer</label>
 		</td>
 
 		<td><input id="babysitter" type="radio" value="babysitter" name="question1">
-    <label for="babysitter"><img src="images/occupations/babysitter.png"><br />Babysitter</label>
+    <label for="babysitter"><img src="images/occupations/babysitter.png" width="50%"><br />Babysitter</label>
 		</td>
 
 		<td><input id="guard" type="radio" value="guard" name="question1">
-    <label for="guard"><img src="images/occupations/guard.png"><br />Guard</label>
+    <label for="guard"><img src="images/occupations/guard.png" width="50%"><br />Guard</label>
 		</td>
 		<td><input id="clock" type="radio" value="clock" name="question1">
-    <label for="clock"><img src="images/occupations/clock.png"><br />Watch Repairer</label>
-		</td>
-		<td><input id="newspaper" type="radio" value="newspaper" name="question1">
-    <label for="newspaper"><img src="images/occupations/newspaper.png"><br />News Paper</label>
+    <label for="clock"><img src="images/occupations/clock.png" width="50%"><br />Watch Repairer</label>
 		</td>
 	</tr>
+	<tr>
+		<td><input id="newspaper" type="radio" value="newspaper" name="question1">
+    <label for="newspaper"><img src="images/occupations/newspaper.png" width="50%"><br />News Paper</label>
+		</td>
+		<td><input id="painter" type="radio" value="painter" name="question1">
+    <label for="painter"><img src="images/occupations/painter.png" width="50%"><br />Painter</label>
+		</td>
+		<td><input id="dishwasher" type="radio" value="dishwasher" name="question1">
+    <label for="dishwasher"><img src="images/occupations/dishwasher.png" width="50%"><br />Dishwasher</label>
+		</td>
+		<td><input id="gardener" type="radio" value="gardener" name="question1">
+    <label for="gardener"><img src="images/occupations/garderner.png" width="50%"><br />Gardener</label>
+		</td>
+	</tr>
+		
 
 
 </table>

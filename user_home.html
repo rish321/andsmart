@@ -8,6 +8,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>NIPUण </title>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
+<script src="js/jquery.chained.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="keywords" content="Enginery Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -17,8 +20,17 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
 <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 <!--slider-->
 <link href="css/slider.css" rel="stylesheet" type="text/css" media="all"/>
-<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+
+<link type="text/css" src="js/gentleSelect/jquery-gentleSelect.min.css" />
+
+<!-- Check Script-->
+<script type="text/javascript" src="root/js/chk_user.js"></script>
+
+<link type="text/css" src="js/gentleSelect/jquery-gentleSelect.min.css" />
+<script type="text/javascript" src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
+
+
 <script type="text/javascript">
     $(window).load(function() {
         $('#slider').nivoSlider();
@@ -35,6 +47,21 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
             });
         });
     </script>    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#language').gentleSelect({ 
+            columns: 3,
+            itemWidth: 200,
+            maxDisplay: 4,
+            prompt: "Select all the languages that you know.",
+	    hideOnMouseOut: true
+        });
+    });
+    </script>
+<script language='JavaScript'>
+$("#series").chained("#mark"); /* or $("#series").chainedTo("#mark"); */
+</script>
+
 </head>
 <body>
 <div class="wrap"> 	
@@ -69,10 +96,10 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
 	    </div>
   <div class="main">
 	   <div class="content-top">
-			 <div class="top-box">
-				<form action="results.php" method="post">
+			 <div class="top-box" id="content_result" >
+				<form action="#" method="post" onsubmit="return chk_user();" >
 			<text font size="20"> I want </text> 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<select name="Worker" >
+			<select name="worker" >
                                  <option value="electrician">Electrician</option>
                                  <option value="plumber">Plumber</option>
                                  <option value="driver">Driver</option>
@@ -97,8 +124,12 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
                                  <option value="babysitter">Babysitter</option>
                                  <option value="guard">Guard</option>
                                  <option value="clock">Watch Repairer</option>
+                                 <option value="newspaper">Newspaper</option>
+				
 			</select>
-			&nbsp;&nbsp;&nbsp;&nbsp;			&nbsp;&nbsp;&nbsp;&nbsp;			&nbsp;&nbsp;&nbsp;&nbsp;
+<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;			&nbsp;&nbsp;&nbsp;&nbsp;			&nbsp;&nbsp;&nbsp;
+<br />
 			<text font size="20"> My Location </text>			&nbsp;&nbsp;&nbsp;&nbsp;
 <select id="mark" name="mark">
     <option value="">--</option>
@@ -4051,12 +4082,34 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
   <option value="Yerwada" class="Pune">Yerwada</option>
   <option value="Yashvant Nagar" class="Pune">Yashvant Nagar</option>
 </select>
-
-
-			&nbsp;&nbsp;&nbsp;&nbsp;			&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="submit">
+<script language='JavaScript'>
+$("#series").chained("#mark"); /* or $("#series").chainedTo("#mark"); */
+</script>
+<br /> <br />
+<label>Language Preferred: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<select id='language' multiple='multiple' name='language[]' >
+					<option value="hindi">हिंदी (Hindi)</option>
+					<option value="english">English</option>
+					<option value="bengali">বেঙ্গলি (Bengali)</option>
+					<option value="gujarati">ગુજરાતી (Gujarati)</option>
+					<option value="kannada">ಕನ್ನಡ (Kannada)</option>
+					<option value="malayalam">മലയാലമ് (Malayalam)</option>
+					<option value="marathi">मराठी (Marathi)</option>
+					<option value="odiya">ଉଡ଼ିଯା (Odiya)</option>
+					<option value="punjabi">ਪੰਜਾਬੀ (Punjabi)</option>
+					<option value="tamil">தமிழ் (Tamil)</option>
+					<option value="telugu">తెలుగు (Telugu)</option>
+					<option value="urdu">اردو (Urdu)</option>
+				</select>
+<br />
+<br />
+<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<br /><br /><input type="submit">
 				
 			</form>
+			<br /><br />
+			<div id="responce_table"></div>
 
 				
 			 </div>
