@@ -59,13 +59,13 @@ function data(form)
 			
 			if(data.startsWith("Results"))
 			{
-				alert("data successfully enterd.");
+				alert("Data Successfully retrived");
 				document.getElementById("responce_table").innerHTML=data;
 				//alert(data);
 	//			window.location.replace("http://10.2.8.180/andsmart/index.html?responce=Thanks%20for%20registration.");
 			}
 			else	
-				alert("Data entry fail. Recheck your entry");
+				alert("There is no such entry. Recheck your inputs fields");
 		}
 	  ); 
 

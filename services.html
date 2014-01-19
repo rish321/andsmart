@@ -16,6 +16,7 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/cordova.js"></script> 
 <!-- Navigation -->
  <script src="js/navigation.js" type="text/javascript"></script>
     <script>

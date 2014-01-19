@@ -1,3 +1,4 @@
+<script type="text/javascript" src="js/cordova.js"></script> 
 <?php
 //include_once 'psl-config.php';   // As functions.php is not included
 $host = "10.2.8.180";

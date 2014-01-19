@@ -1,3 +1,4 @@
+<script type="text/javascript" src="js/cordova.js"></script> 
 <?php
 include_once 'root/includes/functions.php';
 sec_session_start();
